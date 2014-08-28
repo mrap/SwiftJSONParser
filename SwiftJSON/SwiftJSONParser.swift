@@ -27,19 +27,11 @@ public class JSONParser {
 
     class func getFinalValue(json: JSON, withPath path: JSONPath) -> JSON? {
         if let nextKey = path.popNext() {
-            if let value: AnyObject = json[nextKey] {
-                switch value {
-                case is String:
-                    return value as JSON
-                case is Double:
-                    return getFinalValue(value, withPath: path)
-                case is Int:
-                    return getFinalValue(value, withPath: path)
-                case let nestedJson as JSONDictionary:
-                    return getFinalValue(nestedJson, withPath: path)
-                default:
-                    return json
                 }
+            }
+
+            if let value: AnyObject = json[nextKey] {
+                return getFinalValue(value, withPath: path)
             }
         }
 
