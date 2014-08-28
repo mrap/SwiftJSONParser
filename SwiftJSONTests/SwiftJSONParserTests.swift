@@ -28,4 +28,12 @@ class SwiftJSONParserTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    func testGetStringValue() {
+        if let value = JSONParser.get(data, path: "keyForString") as? String {
+            XCTAssertEqual(value, "string", "Should return a string value")
+        } else {
+            XCTFail("Value should not be nil")
+        }
+    }
 }

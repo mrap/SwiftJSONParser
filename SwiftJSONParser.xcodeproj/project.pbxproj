@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A954079719AEDDCC0076E292 /* SwiftJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6EE19AED6C000B9AB30 /* SwiftJSONParser.swift */; };
+		A954079919AEF2620076E292 /* JSONPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A954079819AEF2620076E292 /* JSONPath.swift */; };
+		A954079A19AEF2620076E292 /* JSONPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A954079819AEF2620076E292 /* JSONPath.swift */; };
 		A974F6D119AE9A7700B9AB30 /* SwiftJSONParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A974F6D019AE9A7700B9AB30 /* SwiftJSONParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A974F6DB19AE9A7800B9AB30 /* SwiftJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6DA19AE9A7800B9AB30 /* SwiftJSONTests.swift */; };
+		A974F6DB19AE9A7800B9AB30 /* SwiftJSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6DA19AE9A7800B9AB30 /* SwiftJSONParserTests.swift */; };
 		A974F6ED19AEC7F700B9AB30 /* BasicTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */; };
+		A974F6EF19AED6C000B9AB30 /* SwiftJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6EE19AED6C000B9AB30 /* SwiftJSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A974F6CB19AE9A7700B9AB30 /* SwiftJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A954079819AEF2620076E292 /* JSONPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONPath.swift; sourceTree = "<group>"; };
+		A974F6CB19AE9A7700B9AB30 /* SwiftJSONParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftJSONParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974F6CF19AE9A7700B9AB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A974F6D019AE9A7700B9AB30 /* SwiftJSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftJSONParser.h; sourceTree = "<group>"; };
 		A974F6D619AE9A7800B9AB30 /* SwiftJSONParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftJSONParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974F6D919AE9A7800B9AB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A974F6DA19AE9A7800B9AB30 /* SwiftJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSONTests.swift; sourceTree = "<group>"; };
+		A974F6DA19AE9A7800B9AB30 /* SwiftJSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSONParserTests.swift; sourceTree = "<group>"; };
 		A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BasicTypes.json; sourceTree = "<group>"; };
+		A974F6EE19AED6C000B9AB30 /* SwiftJSONParser.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = SwiftJSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,7 @@
 		A974F6CC19AE9A7700B9AB30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A974F6CB19AE9A7700B9AB30 /* SwiftJSON.framework */,
+				A974F6CB19AE9A7700B9AB30 /* SwiftJSONParser.framework */,
 				A974F6D619AE9A7800B9AB30 /* SwiftJSONParserTests.xctest */,
 			);
 			name = Products;
@@ -62,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				A974F6D019AE9A7700B9AB30 /* SwiftJSONParser.h */,
+				A974F6EE19AED6C000B9AB30 /* SwiftJSONParser.swift */,
+				A954079819AEF2620076E292 /* JSONPath.swift */,
 				A974F6CE19AE9A7700B9AB30 /* Supporting Files */,
 			);
 			name = SwiftJSONParser;
@@ -79,7 +87,7 @@
 		A974F6D719AE9A7800B9AB30 /* SwiftJSONParserTests */ = {
 			isa = PBXGroup;
 			children = (
-				A974F6DA19AE9A7800B9AB30 /* SwiftJSONTests.swift */,
+				A974F6DA19AE9A7800B9AB30 /* SwiftJSONParserTests.swift */,
 				A974F6EA19AEC6B500B9AB30 /* Fixtures */,
 				A974F6D819AE9A7800B9AB30 /* Supporting Files */,
 			);
@@ -132,7 +140,7 @@
 			);
 			name = SwiftJSONParser;
 			productName = SwiftJSON;
-			productReference = A974F6CB19AE9A7700B9AB30 /* SwiftJSON.framework */;
+			productReference = A974F6CB19AE9A7700B9AB30 /* SwiftJSONParser.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A974F6D519AE9A7800B9AB30 /* SwiftJSONParserTests */ = {
@@ -210,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A954079919AEF2620076E292 /* JSONPath.swift in Sources */,
+				A974F6EF19AED6C000B9AB30 /* SwiftJSONParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A974F6DB19AE9A7800B9AB30 /* SwiftJSONTests.swift in Sources */,
+				A954079719AEDDCC0076E292 /* SwiftJSONParser.swift in Sources */,
+				A974F6DB19AE9A7800B9AB30 /* SwiftJSONParserTests.swift in Sources */,
+				A954079A19AEF2620076E292 /* JSONPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +324,7 @@
 		A974F6DF19AE9A7800B9AB30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -321,12 +334,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = SwiftJSONParser;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A974F6E019AE9A7800B9AB30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -388,6 +403,7 @@
 				A974F6E019AE9A7800B9AB30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A974F6E119AE9A7800B9AB30 /* Build configuration list for PBXNativeTarget "SwiftJSONParserTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +412,7 @@
 				A974F6E319AE9A7800B9AB30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
