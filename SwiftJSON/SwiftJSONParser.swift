@@ -65,4 +65,8 @@ public class JSONParser {
     public class func getDouble(jsonData: NSData?, path: String?) -> Double? {
         return self.get(jsonData, path: path) as? Double
     }
+
+    public class func getArray(jsonData: NSData?, path: String?) -> Array<AnyObject>? {
+        return self.get(jsonData, path: path) as? Array<AnyObject>
+    }
 }

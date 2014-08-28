@@ -96,4 +96,13 @@ class SwiftJSONParserTests: XCTestCase {
             XCTFail("Value should not be nil")
         }
     }
+
+    func testGetArray() {
+        if let array = JSONParser.getArray(data, path: "keyForArray") {
+            let expected = ["string", 42, 98.6]
+            XCTAssertEqual(array, expected, "Should return an Array containing correct values")
+        } else {
+            XCTFail("Value should not be nil")
+        }
+    }
 }
