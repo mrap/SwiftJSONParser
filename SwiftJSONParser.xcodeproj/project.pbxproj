@@ -10,6 +10,8 @@
 		A954079719AEDDCC0076E292 /* SwiftJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6EE19AED6C000B9AB30 /* SwiftJSONParser.swift */; };
 		A954079919AEF2620076E292 /* JSONPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A954079819AEF2620076E292 /* JSONPath.swift */; };
 		A954079A19AEF2620076E292 /* JSONPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A954079819AEF2620076E292 /* JSONPath.swift */; };
+		A95407A719AFBCA90076E292 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95407A619AFBCA90076E292 /* SwiftRegex.swift */; };
+		A95407A819AFBCA90076E292 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95407A619AFBCA90076E292 /* SwiftRegex.swift */; };
 		A974F6D119AE9A7700B9AB30 /* SwiftJSONParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A974F6D019AE9A7700B9AB30 /* SwiftJSONParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A974F6DB19AE9A7800B9AB30 /* SwiftJSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6DA19AE9A7800B9AB30 /* SwiftJSONParserTests.swift */; };
 		A974F6ED19AEC7F700B9AB30 /* BasicTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */; };
@@ -18,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		A954079819AEF2620076E292 /* JSONPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONPath.swift; sourceTree = "<group>"; };
+		A95407A619AFBCA90076E292 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
 		A974F6CB19AE9A7700B9AB30 /* SwiftJSONParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftJSONParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974F6CF19AE9A7700B9AB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A974F6D019AE9A7700B9AB30 /* SwiftJSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftJSONParser.h; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 				A974F6D019AE9A7700B9AB30 /* SwiftJSONParser.h */,
 				A974F6EE19AED6C000B9AB30 /* SwiftJSONParser.swift */,
 				A954079819AEF2620076E292 /* JSONPath.swift */,
+				A95407A619AFBCA90076E292 /* SwiftRegex.swift */,
 				A974F6CE19AE9A7700B9AB30 /* Supporting Files */,
 			);
 			name = SwiftJSONParser;
@@ -220,6 +224,7 @@
 			files = (
 				A954079919AEF2620076E292 /* JSONPath.swift in Sources */,
 				A974F6EF19AED6C000B9AB30 /* SwiftJSONParser.swift in Sources */,
+				A95407A719AFBCA90076E292 /* SwiftRegex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +235,7 @@
 				A954079719AEDDCC0076E292 /* SwiftJSONParser.swift in Sources */,
 				A974F6DB19AE9A7800B9AB30 /* SwiftJSONParserTests.swift in Sources */,
 				A954079A19AEF2620076E292 /* JSONPath.swift in Sources */,
+				A95407A819AFBCA90076E292 /* SwiftRegex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

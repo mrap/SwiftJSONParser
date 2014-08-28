@@ -27,6 +27,14 @@ public class JSONParser {
 
     class func getFinalValue(json: JSON, withPath path: JSONPath) -> JSON? {
         if let nextKey = path.popNext() {
+
+            // Handle JSONArray type here
+            // Get the value from the array and call recursively on the child
+            if let (arrayKey, arrayIndex) = JSONPath.getArrayKeyAndIndex(nextKey) {
+                if arrayKey != nil && arrayIndex != nil {
+                    if let array = json[arrayKey!] as? JSONArray {
+                        return getFinalValue(array[arrayIndex!] as JSON, withPath: path)
+                    }
                 }
             }
 
