@@ -11,26 +11,21 @@ import XCTest
 
 class SwiftJSONTests: XCTestCase {
     
+    var data :NSData?
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        if let path = NSBundle(forClass: SwiftJSONTests.self).pathForResource("BasicTypes", ofType: "json") {
+            var error: NSError?
+            self.data = NSData.dataWithContentsOfFile(path, options: .DataReadingMappedIfSafe, error: &error)
+            XCTAssertNil(error, "Got error reading json file")
+            XCTAssertNotNil(data, "JSON data should not be nil")
+        }
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

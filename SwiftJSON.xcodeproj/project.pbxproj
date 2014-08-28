@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A974F6D119AE9A7700B9AB30 /* SwiftJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = A974F6D019AE9A7700B9AB30 /* SwiftJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A974F6DB19AE9A7800B9AB30 /* SwiftJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6DA19AE9A7800B9AB30 /* SwiftJSONTests.swift */; };
+		A974F6ED19AEC7F700B9AB30 /* BasicTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		A974F6D619AE9A7800B9AB30 /* SwiftJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974F6D919AE9A7800B9AB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A974F6DA19AE9A7800B9AB30 /* SwiftJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSONTests.swift; sourceTree = "<group>"; };
+		A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BasicTypes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				A974F6DA19AE9A7800B9AB30 /* SwiftJSONTests.swift */,
+				A974F6EA19AEC6B500B9AB30 /* Fixtures */,
 				A974F6D819AE9A7800B9AB30 /* Supporting Files */,
 			);
 			path = SwiftJSONTests;
@@ -88,6 +91,14 @@
 				A974F6D919AE9A7800B9AB30 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A974F6EA19AEC6B500B9AB30 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */,
+			);
+			name = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A974F6ED19AEC7F700B9AB30 /* BasicTypes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
