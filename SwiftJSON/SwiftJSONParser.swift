@@ -23,29 +23,34 @@ func jsonDictionary(fromData: NSData?) -> JSONDictionary? {
     return nil
 }
 
-func getFinalValue(json: JSON, withPath path: JSONPath) -> JSON? {
-    if let nextKey = path.popNext() {
-        if let value: AnyObject = json[nextKey] {
-            switch value {
-            case is String:
-                return value as JSON
-            case let nestedJson as JSONDictionary:
-                return getFinalValue(nestedJson, withPath: path)
-            default:
-                return json
+public class JSONParser {
+
+    class func getFinalValue(json: JSON, withPath path: JSONPath) -> JSON? {
+        if let nextKey = path.popNext() {
+            if let value: AnyObject = json[nextKey] {
+                switch value {
+                case is String:
+                    return value as JSON
+                case let nestedJson as JSONDictionary:
+                    return getFinalValue(nestedJson, withPath: path)
+                default:
+                    return json
+                }
             }
         }
+
+        return json
     }
 
-    return json
-}
-
-public class JSONParser {
     public class func get(jsonData: NSData?, path: String?) -> AnyObject? {
         if let json = jsonDictionary(jsonData) as JSONDictionary? {
             return getFinalValue(json, withPath: JSONPath(path) )
         }
 
         return nil
+    }
+
+    public class func getString(jsonData: NSData?, path: String?) -> String? {
+        return self.get(jsonData, path: path) as? String
     }
 }
