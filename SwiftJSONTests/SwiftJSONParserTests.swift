@@ -31,7 +31,7 @@ class SwiftJSONParserTests: XCTestCase {
     
     func testGetStringValue() {
         if let value = JSONParser.getString(data, path: "keyForString") {
-            XCTAssertEqual(value, "string", "Should return a string value")
+            XCTAssertEqual(value, "string", "Should return a String value")
         } else {
             XCTFail("Value should not be nil")
         }
@@ -39,7 +39,7 @@ class SwiftJSONParserTests: XCTestCase {
     
     func testGetNestedStringValue() {
         if let value = JSONParser.getString(data, path: "nested.keyForString") {
-            XCTAssertEqual(value, "string", "Should return a string value")
+            XCTAssertEqual(value, "string", "Should return a String value")
         } else {
             XCTFail("Value should not be nil")
         }
