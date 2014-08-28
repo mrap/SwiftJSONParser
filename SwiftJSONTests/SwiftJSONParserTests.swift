@@ -1,6 +1,6 @@
 //
-//  SwiftJSONTests.swift
-//  SwiftJSONTests
+//  SwiftJSONParserTests.swift
+//  SwiftJSONParserTests
 //
 //  Created by mrap on 8/27/14.
 //  Copyright (c) 2014 Mike Rapadas. All rights reserved.
@@ -9,14 +9,14 @@
 import UIKit
 import XCTest
 
-class SwiftJSONTests: XCTestCase {
+class SwiftJSONParserTests: XCTestCase {
     
     var data :NSData?
     
     override func setUp() {
         super.setUp()
         
-        if let path = NSBundle(forClass: SwiftJSONTests.self).pathForResource("BasicTypes", ofType: "json") {
+        if let path = NSBundle(forClass: SwiftJSONParserTests.self).pathForResource("BasicTypes", ofType: "json") {
             var error: NSError?
             self.data = NSData.dataWithContentsOfFile(path, options: .DataReadingMappedIfSafe, error: &error)
             XCTAssertNil(error, "Got error reading json file")

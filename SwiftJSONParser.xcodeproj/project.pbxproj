@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A974F6D119AE9A7700B9AB30 /* SwiftJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = A974F6D019AE9A7700B9AB30 /* SwiftJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A974F6D119AE9A7700B9AB30 /* SwiftJSONParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A974F6D019AE9A7700B9AB30 /* SwiftJSONParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A974F6DB19AE9A7800B9AB30 /* SwiftJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6DA19AE9A7800B9AB30 /* SwiftJSONTests.swift */; };
 		A974F6ED19AEC7F700B9AB30 /* BasicTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */; };
 /* End PBXBuildFile section */
@@ -15,8 +15,8 @@
 /* Begin PBXFileReference section */
 		A974F6CB19AE9A7700B9AB30 /* SwiftJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974F6CF19AE9A7700B9AB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A974F6D019AE9A7700B9AB30 /* SwiftJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftJSON.h; sourceTree = "<group>"; };
-		A974F6D619AE9A7800B9AB30 /* SwiftJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A974F6D019AE9A7700B9AB30 /* SwiftJSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftJSONParser.h; sourceTree = "<group>"; };
+		A974F6D619AE9A7800B9AB30 /* SwiftJSONParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftJSONParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A974F6D919AE9A7800B9AB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A974F6DA19AE9A7800B9AB30 /* SwiftJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSONTests.swift; sourceTree = "<group>"; };
 		A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BasicTypes.json; sourceTree = "<group>"; };
@@ -43,8 +43,8 @@
 		A974F6C119AE9A7700B9AB30 = {
 			isa = PBXGroup;
 			children = (
-				A974F6CD19AE9A7700B9AB30 /* SwiftJSON */,
-				A974F6D719AE9A7800B9AB30 /* SwiftJSONTests */,
+				A974F6CD19AE9A7700B9AB30 /* SwiftJSONParser */,
+				A974F6D719AE9A7800B9AB30 /* SwiftJSONParserTests */,
 				A974F6CC19AE9A7700B9AB30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,17 +53,18 @@
 			isa = PBXGroup;
 			children = (
 				A974F6CB19AE9A7700B9AB30 /* SwiftJSON.framework */,
-				A974F6D619AE9A7800B9AB30 /* SwiftJSONTests.xctest */,
+				A974F6D619AE9A7800B9AB30 /* SwiftJSONParserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A974F6CD19AE9A7700B9AB30 /* SwiftJSON */ = {
+		A974F6CD19AE9A7700B9AB30 /* SwiftJSONParser */ = {
 			isa = PBXGroup;
 			children = (
-				A974F6D019AE9A7700B9AB30 /* SwiftJSON.h */,
+				A974F6D019AE9A7700B9AB30 /* SwiftJSONParser.h */,
 				A974F6CE19AE9A7700B9AB30 /* Supporting Files */,
 			);
+			name = SwiftJSONParser;
 			path = SwiftJSON;
 			sourceTree = "<group>";
 		};
@@ -75,13 +76,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A974F6D719AE9A7800B9AB30 /* SwiftJSONTests */ = {
+		A974F6D719AE9A7800B9AB30 /* SwiftJSONParserTests */ = {
 			isa = PBXGroup;
 			children = (
 				A974F6DA19AE9A7800B9AB30 /* SwiftJSONTests.swift */,
 				A974F6EA19AEC6B500B9AB30 /* Fixtures */,
 				A974F6D819AE9A7800B9AB30 /* Supporting Files */,
 			);
+			name = SwiftJSONParserTests;
 			path = SwiftJSONTests;
 			sourceTree = "<group>";
 		};
@@ -108,16 +110,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A974F6D119AE9A7700B9AB30 /* SwiftJSON.h in Headers */,
+				A974F6D119AE9A7700B9AB30 /* SwiftJSONParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A974F6CA19AE9A7700B9AB30 /* SwiftJSON */ = {
+		A974F6CA19AE9A7700B9AB30 /* SwiftJSONParser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A974F6DE19AE9A7800B9AB30 /* Build configuration list for PBXNativeTarget "SwiftJSON" */;
+			buildConfigurationList = A974F6DE19AE9A7800B9AB30 /* Build configuration list for PBXNativeTarget "SwiftJSONParser" */;
 			buildPhases = (
 				A974F6C619AE9A7700B9AB30 /* Sources */,
 				A974F6C719AE9A7700B9AB30 /* Frameworks */,
@@ -128,14 +130,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftJSON;
+			name = SwiftJSONParser;
 			productName = SwiftJSON;
 			productReference = A974F6CB19AE9A7700B9AB30 /* SwiftJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A974F6D519AE9A7800B9AB30 /* SwiftJSONTests */ = {
+		A974F6D519AE9A7800B9AB30 /* SwiftJSONParserTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A974F6E119AE9A7800B9AB30 /* Build configuration list for PBXNativeTarget "SwiftJSONTests" */;
+			buildConfigurationList = A974F6E119AE9A7800B9AB30 /* Build configuration list for PBXNativeTarget "SwiftJSONParserTests" */;
 			buildPhases = (
 				A974F6D219AE9A7800B9AB30 /* Sources */,
 				A974F6D319AE9A7800B9AB30 /* Frameworks */,
@@ -145,9 +147,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftJSONTests;
+			name = SwiftJSONParserTests;
 			productName = SwiftJSONTests;
-			productReference = A974F6D619AE9A7800B9AB30 /* SwiftJSONTests.xctest */;
+			productReference = A974F6D619AE9A7800B9AB30 /* SwiftJSONParserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -167,7 +169,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A974F6C519AE9A7700B9AB30 /* Build configuration list for PBXProject "SwiftJSON" */;
+			buildConfigurationList = A974F6C519AE9A7700B9AB30 /* Build configuration list for PBXProject "SwiftJSONParser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -179,8 +181,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A974F6CA19AE9A7700B9AB30 /* SwiftJSON */,
-				A974F6D519AE9A7800B9AB30 /* SwiftJSONTests */,
+				A974F6CA19AE9A7700B9AB30 /* SwiftJSONParser */,
+				A974F6D519AE9A7800B9AB30 /* SwiftJSONParserTests */,
 			);
 		};
 /* End PBXProject section */
@@ -317,7 +319,7 @@
 				INFOPLIST_FILE = SwiftJSON/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftJSONParser;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -332,7 +334,7 @@
 				INFOPLIST_FILE = SwiftJSON/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftJSONParser;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -350,7 +352,7 @@
 				);
 				INFOPLIST_FILE = SwiftJSONTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftJSONParserTests;
 			};
 			name = Debug;
 		};
@@ -363,14 +365,14 @@
 				);
 				INFOPLIST_FILE = SwiftJSONTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftJSONParserTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A974F6C519AE9A7700B9AB30 /* Build configuration list for PBXProject "SwiftJSON" */ = {
+		A974F6C519AE9A7700B9AB30 /* Build configuration list for PBXProject "SwiftJSONParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A974F6DC19AE9A7800B9AB30 /* Debug */,
@@ -379,7 +381,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A974F6DE19AE9A7800B9AB30 /* Build configuration list for PBXNativeTarget "SwiftJSON" */ = {
+		A974F6DE19AE9A7800B9AB30 /* Build configuration list for PBXNativeTarget "SwiftJSONParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A974F6DF19AE9A7800B9AB30 /* Debug */,
@@ -387,7 +389,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		A974F6E119AE9A7800B9AB30 /* Build configuration list for PBXNativeTarget "SwiftJSONTests" */ = {
+		A974F6E119AE9A7800B9AB30 /* Build configuration list for PBXNativeTarget "SwiftJSONParserTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A974F6E219AE9A7800B9AB30 /* Debug */,
