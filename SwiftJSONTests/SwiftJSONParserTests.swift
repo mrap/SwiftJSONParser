@@ -44,4 +44,21 @@ class SwiftJSONParserTests: XCTestCase {
             XCTFail("Value should not be nil")
         }
     }
+
+    func testGetIntValue() {
+        if let value = JSONParser.getInt(data, path: "keyForInt") {
+            XCTAssertEqual(value, 42, "Should return an Int value")
+        } else {
+            XCTFail("Value should not be nil")
+        }
+    }
+    
+    func testGetNestedIntValue() {
+        if let value = JSONParser.getInt(data, path: "nested.keyForInt") {
+            XCTAssertEqual(value, 42, "Should return an Int value")
+        } else {
+            XCTFail("Value should not be nil")
+        }
+    }
+    
 }

@@ -31,6 +31,8 @@ public class JSONParser {
                 switch value {
                 case is String:
                     return value as JSON
+                case is Int:
+                    return getFinalValue(value, withPath: path)
                 case let nestedJson as JSONDictionary:
                     return getFinalValue(nestedJson, withPath: path)
                 default:
@@ -52,5 +54,9 @@ public class JSONParser {
 
     public class func getString(jsonData: NSData?, path: String?) -> String? {
         return self.get(jsonData, path: path) as? String
+    }
+
+    public class func getInt(jsonData: NSData?, path: String?) -> Int? {
+        return self.get(jsonData, path: path) as? Int
     }
 }
