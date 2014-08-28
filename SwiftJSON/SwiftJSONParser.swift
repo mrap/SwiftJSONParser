@@ -29,9 +29,10 @@ func getFinalValue(json: JSON, withPath path: JSONPath) -> JSON? {
             switch value {
             case is String:
                 return value as JSON
+            case let nestedJson as JSONDictionary:
+                return getFinalValue(nestedJson, withPath: path)
             default:
                 return json
-
             }
         }
     }
