@@ -61,4 +61,19 @@ class SwiftJSONParserTests: XCTestCase {
         }
     }
     
+    func testGetDoubleValue() {
+        if let value = JSONParser.getDouble(data, path: "keyForDouble") {
+            XCTAssertEqual(value, 98.6, "Should return an Double value")
+        } else {
+            XCTFail("Value should not be nil")
+        }
+    }
+    
+    func testGetNestedDoubleValue() {
+        if let value = JSONParser.getDouble(data, path: "nested.keyForDouble") {
+            XCTAssertEqual(value, 98.6, "Should return an Double value")
+        } else {
+            XCTFail("Value should not be nil")
+        }
+    }
 }
