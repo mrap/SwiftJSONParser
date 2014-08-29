@@ -1,7 +1,5 @@
 # Parse JSON like a badass
 
-## Why do I need SwiftJSONParser?
-
 ### This sucks
 
     let jsonData = NSData(contentsOfURL: NSURL(string: url))
@@ -18,7 +16,7 @@
         }
     }
 
-### This is sexy (and readable)
+### This is badass (and readable)
 
     let jsonData = NSData(contentsOfURL: NSURL(string: url))
     let parser = JSONParser(jsonData)
