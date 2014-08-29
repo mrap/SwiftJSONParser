@@ -46,9 +46,11 @@ public class JSONParser {
                     }
                 }
             }
-
+            
             if let value: AnyObject = json![nextKey] {
                 return getFinalValue(value, withPath: path)
+            } else {
+                return nil
             }
         }
 

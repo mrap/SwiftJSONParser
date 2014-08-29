@@ -107,4 +107,10 @@ class SwiftJSONParserTests: XCTestCase {
             XCTFail("Value should not be nil")
         }
     }
+    
+    func testNotReturnFalsePositive() {
+        if let nonExistent: AnyObject = parser.get("other.nonExistentKey") {
+            XCTFail("Value should not be nil")
+        }
+    }
 }
