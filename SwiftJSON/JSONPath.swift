@@ -8,9 +8,9 @@
 
 import Foundation
 
-public class JSONPath {
+class JSONPath {
     let path: String?
-    var pathComponents: Array<String> = []
+    var pathComponents = Array<String>()
 
     init(_ path: String?) {
         if let nsPath = path as NSString? {
@@ -19,7 +19,12 @@ public class JSONPath {
         }
     }
 
-    public class func getArrayKeyAndIndex(optionalKey: String?) -> (String?, Int?)? {
+    func popNext() -> String? {
+        if pathComponents.isEmpty { return nil }
+        return pathComponents.removeAtIndex(0)
+    }
+    
+    class func getArrayKeyAndIndex(optionalKey: String?) -> (String?, Int?)? {
         if let key = optionalKey as String? {
             var arrayKey: String?
             var arrayIndex: Int?
@@ -38,10 +43,5 @@ public class JSONPath {
         }
 
         return nil
-    }
-
-    func popNext() -> String? {
-        if pathComponents.isEmpty { return nil }
-        return pathComponents.removeAtIndex(0)
     }
 }

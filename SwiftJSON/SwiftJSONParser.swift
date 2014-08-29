@@ -12,7 +12,7 @@ typealias JSON = AnyObject
 typealias JSONDictionary = Dictionary<String, JSON>
 typealias JSONArray = Array<JSON>
 
-func jsonDictionary(fromData: NSData?) -> JSONDictionary? {
+private func jsonDictionary(fromData: NSData?) -> JSONDictionary? {
     if let data = fromData {
         var jsonErrorOptional: NSError?
         if let dict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &jsonErrorOptional) {
@@ -24,16 +24,36 @@ func jsonDictionary(fromData: NSData?) -> JSONDictionary? {
 }
 
 public class JSONParser {
-    let _json: JSONDictionary?
+    private let _json: JSONDictionary?
 
     init() {
     }
 
-    init(_ data: NSData?) {
+    public init(_ data: NSData?) {
         self._json = jsonDictionary(data)
     }
+    
+    public func get(path: String?) -> AnyObject? {
+        return getFinalValue(_json, withPath: JSONPath(path) )
+    }
 
-    func getFinalValue(json: JSON?, withPath path: JSONPath) -> JSON? {
+    public func getString(path: String?) -> String? {
+        return self.get(path) as? String
+    }
+
+    public func getInt(path: String?) -> Int? {
+        return self.get(path) as? Int
+    }
+
+    public func getDouble(path: String?) -> Double? {
+        return self.get(path) as? Double
+    }
+
+    public func getArray(path: String?) -> Array<AnyObject>? {
+        return self.get(path) as? Array<AnyObject>
+    }
+
+    private func getFinalValue(json: JSON?, withPath path: JSONPath) -> JSON? {
         if json == nil { return nil }
         if let nextKey = path.popNext() {
 
@@ -57,23 +77,4 @@ public class JSONParser {
         return json
     }
 
-    func get(path: String?) -> AnyObject? {
-        return getFinalValue(_json, withPath: JSONPath(path) )
-    }
-
-    func getString(path: String?) -> String? {
-        return self.get(path) as? String
-    }
-
-    func getInt(path: String?) -> Int? {
-        return self.get(path) as? Int
-    }
-
-    func getDouble(path: String?) -> Double? {
-        return self.get(path) as? Double
-    }
-
-    func getArray(path: String?) -> Array<AnyObject>? {
-        return self.get(path) as? Array<AnyObject>
-    }
 }
