@@ -24,21 +24,30 @@ func jsonDictionary(fromData: NSData?) -> JSONDictionary? {
 }
 
 public class JSONParser {
+    let _json: JSONDictionary?
 
-    class func getFinalValue(json: JSON, withPath path: JSONPath) -> JSON? {
+    init() {
+    }
+
+    init(_ data: NSData?) {
+        self._json = jsonDictionary(data)
+    }
+
+    func getFinalValue(json: JSON?, withPath path: JSONPath) -> JSON? {
+        if json == nil { return nil }
         if let nextKey = path.popNext() {
 
             // Handle JSONArray type here
             // Get the value from the array and call recursively on the child
             if let (arrayKey, arrayIndex) = JSONPath.getArrayKeyAndIndex(nextKey) {
                 if arrayKey != nil && arrayIndex != nil {
-                    if let array = json[arrayKey!] as? JSONArray {
+                    if let array = json![arrayKey!] as? JSONArray {
                         return getFinalValue(array[arrayIndex!] as JSON, withPath: path)
                     }
                 }
             }
 
-            if let value: AnyObject = json[nextKey] {
+            if let value: AnyObject = json![nextKey] {
                 return getFinalValue(value, withPath: path)
             }
         }
@@ -46,27 +55,23 @@ public class JSONParser {
         return json
     }
 
-    public class func get(jsonData: NSData?, path: String?) -> AnyObject? {
-        if let json = jsonDictionary(jsonData) as JSONDictionary? {
-            return getFinalValue(json, withPath: JSONPath(path) )
-        }
-
-        return nil
+    func get(path: String?) -> AnyObject? {
+        return getFinalValue(_json, withPath: JSONPath(path) )
     }
 
-    public class func getString(jsonData: NSData?, path: String?) -> String? {
-        return self.get(jsonData, path: path) as? String
+    func getString(path: String?) -> String? {
+        return self.get(path) as? String
     }
 
-    public class func getInt(jsonData: NSData?, path: String?) -> Int? {
-        return self.get(jsonData, path: path) as? Int
+    func getInt(path: String?) -> Int? {
+        return self.get(path) as? Int
     }
 
-    public class func getDouble(jsonData: NSData?, path: String?) -> Double? {
-        return self.get(jsonData, path: path) as? Double
+    func getDouble(path: String?) -> Double? {
+        return self.get(path) as? Double
     }
 
-    public class func getArray(jsonData: NSData?, path: String?) -> Array<AnyObject>? {
-        return self.get(jsonData, path: path) as? Array<AnyObject>
+    func getArray(path: String?) -> Array<AnyObject>? {
+        return self.get(path) as? Array<AnyObject>
     }
 }

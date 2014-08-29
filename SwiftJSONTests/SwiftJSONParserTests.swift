@@ -11,7 +11,8 @@ import XCTest
 
 class SwiftJSONParserTests: XCTestCase {
     
-    var data :NSData?
+    var data: NSData?
+    var parser = JSONParser()
     
     override func setUp() {
         super.setUp()
@@ -21,6 +22,7 @@ class SwiftJSONParserTests: XCTestCase {
             self.data = NSData.dataWithContentsOfFile(path, options: .DataReadingMappedIfSafe, error: &error)
             XCTAssertNil(error, "Got error reading json file")
             XCTAssertNotNil(data, "JSON data should not be nil")
+            self.parser = JSONParser(data)
         }
     }
     
@@ -30,7 +32,7 @@ class SwiftJSONParserTests: XCTestCase {
     }
     
     func testGetStringValue() {
-        if let value = JSONParser.getString(data, path: "keyForString") {
+        if let value = parser.getString("keyForString") {
             XCTAssertEqual(value, "string", "Should return a String value")
         } else {
             XCTFail("Value should not be nil")
@@ -38,7 +40,7 @@ class SwiftJSONParserTests: XCTestCase {
     }
     
     func testGetNestedStringValue() {
-        if let value = JSONParser.getString(data, path: "nested.keyForString") {
+        if let value = parser.getString("nested.keyForString") {
             XCTAssertEqual(value, "string", "Should return a String value")
         } else {
             XCTFail("Value should not be nil")
@@ -46,7 +48,7 @@ class SwiftJSONParserTests: XCTestCase {
     }
     
     func testGetIntValue() {
-        if let value = JSONParser.getInt(data, path: "keyForInt") {
+        if let value = parser.getInt("keyForInt") {
             XCTAssertEqual(value, 42, "Should return an Int value")
         } else {
             XCTFail("Value should not be nil")
@@ -54,7 +56,7 @@ class SwiftJSONParserTests: XCTestCase {
     }
     
     func testGetNestedIntValue() {
-        if let value = JSONParser.getInt(data, path: "nested.keyForInt") {
+        if let value = parser.getInt("nested.keyForInt") {
             XCTAssertEqual(value, 42, "Should return an Int value")
         } else {
             XCTFail("Value should not be nil")
@@ -62,7 +64,7 @@ class SwiftJSONParserTests: XCTestCase {
     }
     
     func testGetDoubleValue() {
-        if let value = JSONParser.getDouble(data, path: "keyForDouble") {
+        if let value = parser.getDouble("keyForDouble") {
             XCTAssertEqual(value, 98.6, "Should return an Double value")
         } else {
             XCTFail("Value should not be nil")
@@ -70,7 +72,7 @@ class SwiftJSONParserTests: XCTestCase {
     }
     
     func testGetNestedDoubleValue() {
-        if let value = JSONParser.getDouble(data, path: "nested.keyForDouble") {
+        if let value = parser.getDouble("nested.keyForDouble") {
             XCTAssertEqual(value, 98.6, "Should return an Double value")
         } else {
             XCTFail("Value should not be nil")
@@ -78,19 +80,19 @@ class SwiftJSONParserTests: XCTestCase {
     }
     
     func testGetArrayValues() {
-        if let stringValue = JSONParser.getString(data, path: "keyForArray[0]") {
+        if let stringValue = parser.getString("keyForArray[0]") {
             XCTAssertEqual(stringValue, "string", "Should return a String value")
         } else {
             XCTFail("Value should not be nil")
         }
         
-        if let intValue = JSONParser.getInt(data, path: "keyForArray[1]") {
+        if let intValue = parser.getInt("keyForArray[1]") {
             XCTAssertEqual(intValue, 42, "Should return a Int value")
         } else {
             XCTFail("Value should not be nil")
         }
         
-        if let doubleValue = JSONParser.getDouble(data, path: "keyForArray[2]") {
+        if let doubleValue = parser.getDouble("keyForArray[2]") {
             XCTAssertEqual(doubleValue, 98.6, "Should return a Double value")
         } else {
             XCTFail("Value should not be nil")
@@ -98,7 +100,7 @@ class SwiftJSONParserTests: XCTestCase {
     }
 
     func testGetArray() {
-        if let array = JSONParser.getArray(data, path: "keyForArray") {
+        if let array = parser.getArray("keyForArray") {
             let expected = ["string", 42, 98.6]
             XCTAssertEqual(array, expected, "Should return an Array containing correct values")
         } else {
