@@ -16,6 +16,7 @@
 		A974F6DB19AE9A7800B9AB30 /* SwiftJSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6DA19AE9A7800B9AB30 /* SwiftJSONParserTests.swift */; };
 		A974F6ED19AEC7F700B9AB30 /* BasicTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */; };
 		A974F6EF19AED6C000B9AB30 /* SwiftJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974F6EE19AED6C000B9AB30 /* SwiftJSONParser.swift */; };
+		A9F8A08119B598B1000D9907 /* ErrorHandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8A08019B598B1000D9907 /* ErrorHandingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A974F6DA19AE9A7800B9AB30 /* SwiftJSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSONParserTests.swift; sourceTree = "<group>"; };
 		A974F6EB19AEC6C600B9AB30 /* BasicTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BasicTypes.json; sourceTree = "<group>"; };
 		A974F6EE19AED6C000B9AB30 /* SwiftJSONParser.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = SwiftJSONParser.swift; sourceTree = "<group>"; };
+		A9F8A08019B598B1000D9907 /* ErrorHandingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				A974F6DA19AE9A7800B9AB30 /* SwiftJSONParserTests.swift */,
+				A9F8A08019B598B1000D9907 /* ErrorHandingTests.swift */,
 				A974F6EA19AEC6B500B9AB30 /* Fixtures */,
 				A974F6D819AE9A7800B9AB30 /* Supporting Files */,
 			);
@@ -235,6 +238,7 @@
 				A954079719AEDDCC0076E292 /* SwiftJSONParser.swift in Sources */,
 				A974F6DB19AE9A7800B9AB30 /* SwiftJSONParserTests.swift in Sources */,
 				A954079A19AEF2620076E292 /* JSONPath.swift in Sources */,
+				A9F8A08119B598B1000D9907 /* ErrorHandingTests.swift in Sources */,
 				A95407A819AFBCA90076E292 /* SwiftRegex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

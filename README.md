@@ -68,3 +68,18 @@ Get an Array of values
         // favorites => ["Github", 42, 98.6]
     }
 
+## Error Handling
+
+If you're not sure about incoming json data, check it first
+
+
+    let badJsonData = NSData(contentsOfURL: NSURL(string: url))
+    let parser = JSONParser(badJsonData)
+
+    // Check for an error
+    if parser.error != nil {
+       // Do stuff with json
+    } else {
+       // Handle the error
+       println(parser.error)
+    }

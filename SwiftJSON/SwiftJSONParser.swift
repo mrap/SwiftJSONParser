@@ -12,7 +12,7 @@ typealias JSON = AnyObject
 typealias JSONDictionary = Dictionary<String, JSON>
 typealias JSONArray = Array<JSON>
 
-private func jsonDictionary(fromData: NSData?) -> JSONDictionary? {
+private func jsonDictionary(fromData: NSData?, error: NSErrorPointer) -> JSONDictionary? {
     if let data = fromData {
         var jsonErrorOptional: NSError?
         if let dict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &jsonErrorOptional) {
@@ -25,12 +25,17 @@ private func jsonDictionary(fromData: NSData?) -> JSONDictionary? {
 
 public class JSONParser {
     private let _json: JSONDictionary?
+    public let error: NSError?
 
     init() {
     }
 
     public init(_ data: NSData?) {
-        self._json = jsonDictionary(data)
+        if data != nil {
+            self._json = jsonDictionary(data, &self.error)
+        } else {
+            self.error = NSError(domain: "com.mrap.SwiftJSONParser", code: 100, userInfo: [NSLocalizedDescriptionKey: "Parser did not have any data to parse"])
+        }
     }
     
     public func get(path: String?) -> AnyObject? {

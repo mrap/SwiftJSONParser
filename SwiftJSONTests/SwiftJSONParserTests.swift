@@ -23,6 +23,7 @@ class SwiftJSONParserTests: XCTestCase {
             XCTAssertNil(error, "Got error reading json file")
             XCTAssertNotNil(data, "JSON data should not be nil")
             self.parser = JSONParser(data)
+            XCTAssertNil(parser.error, "Parser should not have an error")
         }
     }
     
