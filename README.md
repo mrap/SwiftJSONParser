@@ -94,3 +94,5 @@ if parser.error != nil {
    println(parser.error)
 }
 ```
+
+And now your a badass. Enjoy.
