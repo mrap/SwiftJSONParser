@@ -95,4 +95,4 @@ if parser.error != nil {
 }
 ```
 
-And now your a badass. Enjoy.
+And now you're a badass. Enjoy.
