@@ -108,3 +108,4 @@ git clone git@github.com:mrap/SwiftJSONParser.git
 - Go to your App Target > Build Phases
 - In Target Dependencies, press `+`, select `SwiftJSONParser`
 
+And now you're a badass. Enjoy.
