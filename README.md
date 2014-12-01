@@ -94,3 +94,17 @@ if parser.error != nil {
    println(parser.error)
 }
 ```
+
+## Installation
+The best way to use SwiftJSONParser is to import it as a framework.
+
+1.  Clone a local copy of SwiftJSONParser in any directory you'd like.
+``
+git clone git@github.com:mrap/SwiftJSONParser.git
+``
+2. Drag `SwiftJSONParser.xcodeproj` into your project's project navigator
+
+3. Add SwiftJSONParser as a Target Dependency.
+- Go to your App Target > Build Phases
+- In Target Dependencies, press `+`, select `SwiftJSONParser`
+
