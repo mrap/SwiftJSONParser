@@ -19,7 +19,7 @@ class SwiftJSONParserTests: XCTestCase {
         
         if let path = NSBundle(forClass: SwiftJSONParserTests.self).pathForResource("BasicTypes", ofType: "json") {
             var error: NSError?
-            self.data = NSData.dataWithContentsOfFile(path, options: .DataReadingMappedIfSafe, error: &error)
+            self.data = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: &error)
             XCTAssertNil(error, "Got error reading json file")
             XCTAssertNotNil(data, "JSON data should not be nil")
             self.parser = JSONParser(data)
@@ -101,7 +101,7 @@ class SwiftJSONParserTests: XCTestCase {
     }
 
     func testGetArray() {
-        if let array = parser.getArray("keyForArray") {
+        if let array = parser.getArray("keyForArray") as? [NSObject] {
             let expected = ["string", 42, 98.6]
             XCTAssertEqual(array, expected, "Should return an Array containing correct values")
         } else {
