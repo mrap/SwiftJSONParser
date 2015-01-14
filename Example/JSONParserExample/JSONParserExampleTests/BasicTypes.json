@@ -7,12 +7,6 @@
         "keyForString": "string",
         "keyForInt": 42,
         "keyForDouble": 98.6,
-        "keyForArray": ["string", 42, 98.6],
-        "nested": {
-            "keyForString": "string",
-            "keyForInt": 42,
-            "keyForDouble": 98.6,
-            "keyForArray": ["string", 42, 98.6]
-        }
+        "keyForArray": ["string", 42, 98.6]
     }
 }
