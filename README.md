@@ -5,7 +5,7 @@
 For production apps (or if you care about efficiency at all),
 I highly recommend using [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 over this library. After benchmarking, I found that SwiftJSONParser could be
-up to 7x slower than SwiftyJSON.
+up to **7x slower** than SwiftyJSON. Switch to SwiftyJSON now!
 
 ### This sucks
 
