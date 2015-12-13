@@ -25,7 +25,7 @@ if let json = jsonOptional as? Dictionary<String, AnyObject> {
 }
 ```
 
-### This is badass (and readable)
+### This is readable
 
 ```swift
 let jsonData = NSData(contentsOfURL: NSURL(string: url))
@@ -114,5 +114,3 @@ git clone git@github.com:mrap/SwiftJSONParser.git
 3. Add SwiftJSONParser as a Target Dependency.
 - Go to your App Target > Build Phases
 - In Target Dependencies, press `+`, select `SwiftJSONParser`
-
-And now you're a badass. Enjoy.
