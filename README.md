@@ -39,7 +39,7 @@ if let handle = parser.getString("other.nicknames[0]") {
 
 ## Usage
 
-Sample JSON payload we want to parse
+Sample JSON payload we want to parse like a badass
 
     {
         "name": "Mike",
@@ -87,7 +87,7 @@ if let favorites = parser.getArray("favorite_things") {
 
 ## Error Handling
 
-If you're not sure about incoming json data, check it first
+If you're not sure about incoming json data, be a badass and check it first
 
 ```swift
 let badJsonData = NSData(contentsOfURL: NSURL(string: url))
@@ -103,7 +103,7 @@ if parser.error != nil {
 ```
 
 ## Installation
-The best way to use SwiftJSONParser is to import it as a framework.
+The most badass way to use SwiftJSONParser is to import it as a framework.
 
 1.  Clone a local copy of SwiftJSONParser in any directory you'd like.
 ``
